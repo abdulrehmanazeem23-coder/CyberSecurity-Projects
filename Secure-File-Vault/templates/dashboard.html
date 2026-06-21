@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="card">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h1 style="margin: 0; font-size: 1.5rem;">Vault <span>Storage</span></h1>
+        <a href="{{ url_for('logout') }}" style="color: var(--text-muted); text-decoration: none;"><i
+                class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+
+    <!-- Upload Section -->
+    <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 1rem; margin-bottom: 2rem;">
+        <h3 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Encrypt New File</h3>
+        <form action="{{ url_for('upload_file') }}" method="POST" enctype="multipart/form-data"
+            style="display: flex; gap: 1rem;">
+            <input type="file" name="file" required style="flex-grow: 1;">
+            <button type="submit" class="btn btn-sm" style="width: auto;">Encrypt <i class="fas fa-lock"></i></button>
+        </form>
+    </div>
+
+    <!-- Local Operations Section -->
+    <div
+        style="background: rgba(59, 130, 246, 0.1); padding: 1.5rem; border-radius: 1rem; margin-bottom: 2rem; border: 1px solid rgba(59, 130, 246, 0.2);">
+        <h3 style="color: #fff; margin-bottom: 1rem; font-size: 1.1rem;">Local File Operations (In-Place)</h3>
+        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">
+            Enter the full path to a file on your computer to encrypt/decrypt it directly.
+            <b>Warning: The original file will be replaced.</b>
+        </p>
+        <div style="display: flex; gap: 1rem;">
+            <form action="{{ url_for('local_encrypt') }}" method="POST" style="flex: 1; display: flex; gap: 0.5rem;">
+                <input type="text" name="filepath" placeholder="C:\path\to\file.txt" required>
+                <button type="submit" class="btn btn-sm">Switch to Encrypted</button>
+            </form>
+            <form action="{{ url_for('local_decrypt') }}" method="POST" style="flex: 1; display: flex; gap: 0.5rem;">
+                <input type="text" name="filepath" placeholder="C:\path\to\file.txt.enc" required>
+                <button type="submit" class="btn btn-sm" style="background: #10b981;">Switch to Decrypted</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- File List -->
+    <h3 style="color: var(--text-muted); font-size: 1rem; margin-bottom: 1rem;">Encrypted Files ({{ files|length }})
+    </h3>
+    <div class="file-list">
+        {% if files %}
+        {% for file in files %}
+        <div class="file-item">
+            <div class="file-info">
+                <span class="icon" style="color: #60a5fa;"><i class="fas fa-file-shield"></i></span>
+                <span style="color: #fff;">{{ file }}</span>
+            </div>
+            <div class="actions">
+                <a href="{{ url_for('download_encrypted', filename=file) }}" class="btn btn-sm"
+                    style="background: #ef4444; text-decoration: none; display: inline-block; margin-right: 0.5rem;">Raw
+                    Encrypted <i class="fas fa-lock"></i></a>
+                <a href="{{ url_for('decrypt', filename=file) }}" class="btn btn-sm"
+                    style="background: #10b981; text-decoration: none; display: inline-block;">Decrypt <i
+                        class="fas fa-unlock"></i></a>
+            </div>
+        </div>
+        {% endfor %}
+        {% else %}
+        <div style="text-align: center; color: var(--text-muted); padding: 2rem;">
+            No files in the vault.
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,45 @@
+[2026-01-03 22:47:31.975520] User registered (via Web/CLI)
+[2026-01-03 22:52:46.793999] User registered (via Web/CLI)
+[2026-01-03 22:53:56.162516] User authenticated successfully
+[2026-01-03 22:56:12.706012] User authenticated successfully
+[2026-01-03 22:57:20.490180] User authenticated successfully
+[2026-01-03 22:59:40.730185] User authenticated successfully
+[2026-01-03 23:06:11.730548] User authenticated successfully
+[2026-01-03 23:07:00.559910] Wrong OTP attempt
+[2026-01-03 23:17:17.412549] User authenticated successfully
+[2026-01-03 23:26:10.978328] User authenticated successfully
+[2026-01-03 23:35:24.090229] User registered: alice
+[2026-01-03 23:48:36.939293] User registered: Zain
+[2026-01-03 23:49:01.572295] Wrong OTP attempt for Zain
+[2026-01-03 23:49:10.485663] User authenticated successfully: Zain
+[2026-01-03 23:52:45.620633] Wrong password attempt for alice
+[2026-01-03 23:56:06.683444] User authenticated successfully: Zain
+[2026-01-04 00:00:09.584273] User authenticated successfully: Zain
+[2026-01-04 11:14:44.593723] User authenticated successfully: Zain
+[2026-01-04 11:59:01.449367] User registered: Hassan
+[2026-01-04 11:59:37.017048] User authenticated successfully: Hassan
+[2026-01-06 09:13:08.263557] User authenticated successfully: Zain
+[2026-01-06 09:19:28.830071] User registered: Zain
+[2026-01-06 14:26:51.675462] Wrong OTP attempt for Zain
+[2026-01-06 14:27:07.209613] User registered: Zain
+[2026-01-06 14:27:21.043047] Wrong OTP attempt for Zain
+[2026-01-06 14:28:19.822173] User registered: Abdul
+[2026-01-06 14:28:38.884068] User authenticated successfully: Abdul
+[2026-01-06 14:50:11.308643] User authenticated successfully: Abdul
+[2026-01-06 15:21:03.828676] User registered: Mannan
+[2026-01-06 15:21:38.952895] User authenticated successfully: Mannan
+[2026-01-06 21:28:17.184083] User registered: Sadya 
+[2026-01-06 21:30:24.055843] Wrong OTP attempt for Mannan
+[2026-01-06 21:30:40.638048] Wrong OTP attempt for Mannan
+[2026-01-06 21:30:56.380629] Wrong password attempt for Zain
+[2026-01-06 21:31:13.887861] User authenticated successfully: Mannan
+[2026-01-12 12:10:51.638275] User registered: Ummi
+[2026-01-12 12:11:25.419271] User authenticated successfully: Ummi
+[2026-01-12 12:12:15.213520] Wrong OTP attempt for Ummi
+[2026-01-12 12:19:18.271591] User registered: Hussain
+[2026-01-12 12:19:44.698940] User authenticated successfully: Hussain
+[2026-01-13 08:29:15.389804] User authenticated successfully: Hussain
+[2026-01-13 12:24:08.227257] User registered: Alice
+[2026-01-13 12:24:42.775584] Wrong OTP attempt for Hussain
+[2026-01-13 12:24:55.561887] User authenticated successfully: Alice
+[2026-01-13 17:01:55.038490] User authenticated successfully: Alice
